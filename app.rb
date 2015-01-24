@@ -15,8 +15,6 @@ libs.each do |lib|
   require lib
 end
 
-require "app/root"
-
 module Snippets
   class App < Sinatra::Application
     configure do
@@ -29,7 +27,11 @@ module Snippets
       database.loggers << Logger.new(STDOUT)
     end
 
+    require "app/root"
+    require "app/snippet"
+
     use Rack::Deflater
     use Root::Route
+    use Snippet::Route
   end
 end
