@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.1.5"
 
-gem "sinatra", require: "sinatra/base"
+gem "sinatra", require: "sinatra/base",  git: "git@github.com:sinatra/sinatra.git"
 
 gem "dotenv"
 gem "rake"
