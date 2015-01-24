@@ -1,7 +1,7 @@
 require "json"
 
-module Snippets::Routes
-  class Base < Sinatra::Application
+module Base
+  class Route < Sinatra::Application
     before do
       content_type "application/hal+json"
       headers "Access-Control-Allow-Origin" => "*",

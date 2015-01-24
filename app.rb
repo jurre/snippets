@@ -15,13 +15,9 @@ libs.each do |lib|
   require lib
 end
 
-require "app/routes"
-require "app/models"
-require "app/representers"
+require "app/root"
 
 module Snippets
-  include Model
-
   class App < Sinatra::Application
     configure do
       set :database, lambda {
@@ -34,6 +30,6 @@ module Snippets
     end
 
     use Rack::Deflater
-    use Routes::Root
+    use Root::Route
   end
 end

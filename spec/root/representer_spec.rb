@@ -1,11 +1,11 @@
 require "spec_helper"
 
-describe Representer::Root do
+describe Root::Representer do
   it "serializes correctly" do
-    represented = OpenStruct.new.extend(Representer::Root).to_hash
+    represented = OpenStruct.new.extend(Root::Representer).to_hash
 
     expect(represented).to eq({
-      "links" => {
+      "_links" => {
         "self" => {
           href: "#{ENV["BASE_URL"]}/"
         },
