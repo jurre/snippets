@@ -1,7 +1,4 @@
 require "spec_helper"
-require "app/snippet/model"
-require "app/snippet/collection"
-require "app/snippet/representer"
 
 describe "Snippets" do
   describe "GET /snippets" do

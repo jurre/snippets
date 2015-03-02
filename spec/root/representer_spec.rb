@@ -6,9 +6,9 @@ describe Root::Representer do
 
     expect(represented).to eq({
       "_links" => {
-        "self" => {
-          href: "#{ENV["BASE_URL"]}/"
-        },
+        "self" => { href: "#{ENV["BASE_URL"]}/" },
+        "snippets" => { href: "#{ENV["BASE_URL"]}/snippets" },
+        "snippet" => { href: "#{ENV["BASE_URL"]}/snippet" }
       }
     })
   end

@@ -15,5 +15,12 @@ module Base
     end
 
     set :protection, false
+
+    def request_body
+      @request_body ||= begin
+                          request.body.rewind
+                          request.body.read
+                        end
+    end
   end
 end

@@ -14,6 +14,10 @@ CONTENT_TYPE_JSON = { "CONTENT_TYPE" => "application/json" }
   end
 end
 
+def last_json_body
+  JSON.parse(last_response.body)
+end
+
 module RbConfig
   include Rack::Test::Methods
   def app
